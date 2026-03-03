@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Speed, Distance & Time</title>
+
+<style>
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: radial-gradient(circle at 20% 30%, #3a0ca3 0%, #1a0033 40%, #000010 100%);
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    width: 200%;
+    height: 200%;
+    background: transparent url('https://www.transparenttextures.com/patterns/stardust.png');
+    animation: moveStars 60s linear infinite;
+    opacity: 0.4;
+    z-index: 0;
+}
+
+@keyframes moveStars {
+    from { transform: translate(0, 0); }
+    to { transform: translate(-500px, -500px); }
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    padding: 80px;
+    text-align: center;
+}
+
+h1 {
+    background: linear-gradient(90deg, #c77dff, #7209b7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+a {
+    display: inline-block;
+    margin-top: 30px;
+    color: #c77dff;
+    text-decoration: none;
+}
+
+</style>
+</head>
+<body>
+
+<div class="content">
+    <h1>Speed, Distance & Time</h1>
+    <p>
+        Speed = Distance ÷ Time  
+        Distance = Speed × Time  
+        Time = Distance ÷ Speed
+    </p>
+
+    <a href="materials.html">← Back to Materials</a>
+</div>
+
+</body>
+</html>

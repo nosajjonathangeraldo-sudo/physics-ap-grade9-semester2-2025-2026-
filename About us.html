@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | Physics Portal</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background: radial-gradient(circle at 20% 30%, #3a0ca3 0%, #1a0033 40%, #000010 100%);
+    color:white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x:hidden;
+    position:relative;
+}
+
+/* moving stars */
+body::before{
+    content:"";
+    position:fixed;
+    width:200%;
+    height:200%;
+    background:transparent url('https://www.transparenttextures.com/patterns/stardust.png');
+    animation:moveStars 60s linear infinite;
+    opacity:0.4;
+    z-index:0;
+}
+
+@keyframes moveStars{
+    from{ transform:translate(0,0); }
+    to{ transform:translate(-500px,-500px); }
+}
+
+/* School logo top-right */
+.school-logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 80px;
+    height: auto;
+    z-index: 5;
+}
+
+nav{
+    position:relative;
+    z-index:2;
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    padding:20px;
+}
+
+nav a{
+    color:#c77dff;
+    text-decoration:none;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav a:hover{
+    text-shadow:0 0 10px #c77dff;
+}
+
+.section{
+    position:relative;
+    z-index:2;
+    max-width:900px;
+    margin:80px auto;
+    padding:50px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.15);
+    box-shadow:0 0 40px rgba(128,0,255,0.5);
+    text-align:center;
+}
+
+h1{
+    margin-bottom:20px;
+    font-size:2.5rem;
+    background:linear-gradient(90deg,#c77dff,#7209b7);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+h2{
+    margin-top:30px;
+    margin-bottom:15px;
+    color:#c77dff;
+}
+
+p{
+    line-height:1.8;
+    opacity:0.85;
+}
+
+button{
+    margin-top:30px;
+    padding:12px 30px;
+    border-radius:30px;
+    border:1px solid #c77dff;
+    background:transparent;
+    color:#c77dff;
+    cursor:pointer;
+    font-size:14px;
+    letter-spacing:1px;
+    transition:0.3s ease;
+    box-shadow:0 0 15px #7209b7;
+}
+
+button:hover{
+    background:#7209b7;
+    color:white;
+    box-shadow:0 0 25px #c77dff;
+    transform:scale(1.05);
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- School Logo -->
+<img src="Laurensia.png" alt="School Logo" class="school-logo">
+
+<nav>
+    <a href="test.html">Home</a>
+    <a href="materials.html">Grades</a>
+    <a href="sources.html">Sources</a>
+</nav>
+
+<div class="section">
+    <h1>About This Physics Portal</h1>
+
+    <p>
+        This website was created as a digital learning platform for students from Grade 7 to Grade 9.
+        It brings together theory, simulations, videos, and interactive practice in one place.
+    </p>
+
+    <h2>Our Goal</h2>
+    <p>
+        To help students understand physics concepts clearly and prepare for exams with structured materials
+        and engaging practice activities.
+    </p>
+
+    <h2>What You Can Find Here</h2>
+    <p>
+        • Clear explanations of key topics<br>
+        • Interactive simulations<br>
+        • Practice challenges<br>
+        • Review materials for school exams
+    </p>
+
+    <a href="materials.html">
+        <button>Explore the Materials</button>
+    </a>
+
+</div>
+
+</body>
+</html>

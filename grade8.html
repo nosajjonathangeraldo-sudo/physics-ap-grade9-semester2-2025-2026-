@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grade 8 Physics | Hyperspace</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background: radial-gradient(circle at 20% 30%, #3a0ca3 0%, #1a0033 40%, #000010 100%);
+    color:white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x:hidden;
+    position:relative;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    width:200%;
+    height:200%;
+    background:transparent url('https://www.transparenttextures.com/patterns/stardust.png');
+    animation:moveStars 60s linear infinite;
+    opacity:0.4;
+    z-index:0;
+}
+
+@keyframes moveStars{
+    from{ transform:translate(0,0); }
+    to{ transform:translate(-500px,-500px); }
+}
+
+.orb{
+    position:absolute;
+    border-radius:50%;
+    background: radial-gradient(circle,#9d4edd,transparent);
+    filter:blur(40px);
+    animation:float 3s ease-in-out infinite alternate;
+    z-index:1;
+}
+
+.orb1{
+    width:250px;
+    height:250px;
+    top:10%;
+    left:10%;
+}
+
+.orb2{
+    width:200px;
+    height:200px;
+    bottom:10%;
+    right:15%;
+    animation-delay:2s;
+}
+
+@keyframes float{
+    from{ transform:translateY(-30px); }
+    to{ transform:translateY(30px); }
+}
+
+nav{
+    position:relative;
+    z-index:2;
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    padding:20px;
+}
+
+nav a{
+    color:#c77dff;
+    text-decoration:none;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav a:hover{
+    text-shadow:0 0 10px #c77dff;
+}
+
+.section{
+    position:relative;
+    z-index:2;
+    max-width:900px;
+    margin:60px auto;
+    padding:40px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.15);
+    box-shadow:0 0 30px rgba(128,0,255,0.4);
+}
+
+h1,h2{
+    text-align:center;
+    margin-bottom:20px;
+    background:linear-gradient(90deg,#c77dff,#7209b7);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+h3{
+    margin-top:25px;
+    color:#c77dff;
+}
+
+p{
+    opacity:0.85;
+    line-height:1.8;
+}
+
+.formula{
+    background:rgba(255,255,255,0.07);
+    padding:15px;
+    border-radius:10px;
+    margin:20px 0;
+    border-left:4px solid #c77dff;
+}
+
+ul{
+    margin:20px 0 20px 20px;
+}
+
+button{
+    padding:12px 30px;
+    border-radius:30px;
+    border:1px solid #c77dff;
+    background:transparent;
+    color:#c77dff;
+    cursor:pointer;
+    font-size:14px;
+    letter-spacing:1px;
+    transition:0.3s ease;
+    box-shadow:0 0 15px #7209b7;
+}
+
+button:hover{
+    background:#7209b7;
+    color:white;
+    box-shadow:0 0 25px #c77dff;
+    transform:scale(1.05);
+}
+
+.center{
+    text-align:center;
+    margin-top:25px;
+}
+
+video{
+    width:100%;
+    margin-top:20px;
+    border-radius:15px;
+}
+
+/* School logo on top-right */
+.school-logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 80px;
+    height: auto;
+    z-index: 5;
+}
+</style>
+</head>
+
+<body>
+
+<!-- School Logo -->
+<img src="Laurensia.png" alt="School Logo" class="school-logo">
+
+<!-- Floating Orbs -->
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+
+<nav>
+    <a href="test.html">Home</a>
+    <a href="materials.html">Grades</a>
+    <a href="About us.html">About</a>
+    <a href="sources.html">Sources</a>
+</nav>
+
+<div class="section">
+    <h1>Grade 8 Physics</h1>
+    <p style="text-align:center;">Thermal Expansion & States of Matter</p>
+</div>
+
+<div class="section">
+    <h2>Thermal Expansion</h2>
+    <p>Materials expand when heated because the particles inside them gain energy. As temperature increases, the particles vibrate faster and take up more space. This causes solids to get slightly longer, liquids to slightly expand in volume, and gases to expand a lot.</p>
+
+    <h3>Linear Expansion</h3>
+    <p>For long objects like rods or rails, expansion usually happens along the length. We calculate it using:</p>
+    <div class="formula">
+        ΔL = α × L₀ × ΔT
+    </div>
+    <p>Where:</p>
+    <ul>
+        <li><strong>ΔL</strong> = change in length (meters)</li>
+        <li><strong>α</strong> = coefficient of linear expansion (1/°C, specific to material)</li>
+        <li><strong>L₀</strong> = original length (meters)</li>
+        <li><strong>ΔT</strong> = temperature change (°C)</li>
+    </ul>
+
+    <h3>Step-by-Step Example 1</h3>
+    <p>A steel rod is 3 meters long at 25°C. If the rod is heated to 75°C, and α = 0.000012/°C, calculate how much the rod length increases.</p>
+    <p><strong>Step 1: Identify known values</strong></p>
+    <ul>
+        <li>L₀ = 3 m</li>
+        <li>ΔT = 75 − 25 = 50°C</li>
+        <li>α = 0.000012/°C</li>
+    </ul>
+    <p><strong>Step 2: Apply formula</strong></p>
+    <div class="formula">
+        ΔL = α × L₀ × ΔT <br>
+        ΔL = 0.000012 × 3 × 50 <br>
+        ΔL = 0.0018 m
+    </div>
+    <p>The steel rod expands by 0.0018 meters, which is 1.8 millimeters. Even though it seems small, this matters in bridges or railway tracks.</p>
+
+    <h3>Step-by-Step Example 2</h3>
+    <p>An aluminum rod of 2 m is heated from 20°C to 70°C. α for aluminum = 0.000024/°C. How much does it expand?</p>
+    <div class="formula">
+        ΔT = 70 − 20 = 50°C <br>
+        ΔL = 0.000024 × 2 × 50 <br>
+        ΔL = 0.0024 m = 2.4 mm
+    </div>
+
+    <h3>Practice Question</h3>
+    <p>Try solving this yourself:</p>
+    <div class="formula">
+        A copper wire is 5 m long at 25°C. If α = 0.000017/°C and the wire is heated to 75°C, calculate ΔL.
+    </div>
+</div>
+
+<div class="section">
+    <h2>States of Matter</h2>
+    <p>All substances exist as solid, liquid, or gas depending on how much energy the particles have:</p>
+
+    <h3>Solid</h3>
+    <p>Particles are tightly packed and vibrate in place. Solids have fixed shape and volume.</p>
+    <div class="formula">
+        Example: Ice cube retains its shape in a glass. Only when heated to 0°C does it start melting.
+    </div>
+
+    <h3>Liquid</h3>
+    <p>Particles move around freely but remain close. Liquids have fixed volume but shape changes to fit the container.</p>
+    <div class="formula">
+        Example: Water poured into a bowl spreads to fill the bottom, but total volume remains the same.
+    </div>
+
+    <h3>Gas</h3>
+    <p>Particles move freely and spread apart. Gases have no fixed shape or volume.</p>
+    <div class="formula">
+        Example: Boiling water produces steam that fills the container completely.
+    </div>
+
+    <h3>Detailed Example</h3>
+    <p>Suppose you have ice at −5°C and heat it gradually:</p>
+    <ol>
+        <li>−5°C to 0°C: solid ice warms but stays solid.</li>
+        <li>0°C: ice starts melting → solid changes to liquid.</li>
+        <li>0°C to 100°C: water heats → liquid expands slightly.</li>
+        <li>100°C: water boils → liquid changes to gas (steam) and expands rapidly.</li>
+    </ol>
+</div>
+
+<div class="section">
+    <h2>Video Explanation</h2>
+    <video controls>
+        <source src="SHC.mp4" type="video/mp4">
+    </video>
+</div>
+
+<div class="section center">
+    <h2>Interactive Simulations</h2>
+    <br>
+    <a href="https://phet.colorado.edu/sims/html/states-of-matter-basics/latest/states-of-matter-basics_en.html" target="_blank">
+        <button>States of Matter Simulation</button>
+    </a>
+    <br><br>
+    <a href="https://www.laboratoriovirtual.fisica.ufc.br/dilatacao-termica?lang=en" target="_blank">
+        <button>Thermal Expansion Simulation</button>
+    </a>
+</div>
+
+<div class="section center">
+    <h2>Practice Questions</h2>
+    <p>Use what you learned to solve these:</p>
+
+    <div class="formula">
+        1. A 1.2 m brass rod is heated from 30°C to 80°C. α = 0.000019/°C. Find ΔL. <br><br>
+        2. Water in a 500 mL container is heated from 25°C to 75°C. Describe what happens to the water's shape and volume. <br><br>
+        3. Ice cube at −10°C is placed in a warm cup. List step by step what happens until it becomes steam. <br><br>
+        4. A railway track is 100 m long. Summer temperature rises by 30°C. If α for steel is 0.000012/°C, calculate the track expansion.
+    </div>
+</div>
+
+<div class="section center">
+    <h2>Try a Challenge!</h2>
+    <p>Apply your knowledge of thermal expansion and states of matter in an interactive quiz.</p>
+    <a href="https://dashboard.blooket.com/set/69a6f9fbed3db019fa75861a" target="_blank">
+        <button>Play the Grade 8 Physics Challenge</button>
+    </a>
+</div>
+
+</body>
+</html>

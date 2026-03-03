@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grade 7 Physics | Hyperspace</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background: radial-gradient(circle at 20% 30%, #3a0ca3 0%, #1a0033 40%, #000010 100%);
+    color:white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x:hidden;
+    position:relative;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    width:200%;
+    height:200%;
+    background:transparent url('https://www.transparenttextures.com/patterns/stardust.png');
+    animation:moveStars 60s linear infinite;
+    opacity:0.4;
+    z-index:0;
+}
+
+@keyframes moveStars{
+    from{ transform:translate(0,0); }
+    to{ transform:translate(-500px,-500px); }
+}
+
+.orb{
+    position:absolute;
+    border-radius:50%;
+    background: radial-gradient(circle,#9d4edd,transparent);
+    filter:blur(40px);
+    animation:float 3s ease-in-out infinite alternate;
+    z-index:1;
+}
+
+.orb1{
+    width:250px;
+    height:250px;
+    top:10%;
+    left:10%;
+}
+
+.orb2{
+    width:200px;
+    height:200px;
+    bottom:10%;
+    right:15%;
+    animation-delay:2s;
+}
+
+@keyframes float{
+    from{ transform:translateY(-30px); }
+    to{ transform:translateY(30px); }
+}
+
+nav{
+    position:relative;
+    z-index:2;
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    padding:20px;
+}
+
+nav a{
+    color:#c77dff;
+    text-decoration:none;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav a:hover{
+    text-shadow:0 0 10px #c77dff;
+}
+
+.section{
+    position:relative;
+    z-index:2;
+    max-width:900px;
+    margin:60px auto;
+    padding:40px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.15);
+    box-shadow:0 0 30px rgba(128,0,255,0.4);
+}
+
+h1,h2{
+    text-align:center;
+    margin-bottom:20px;
+    background:linear-gradient(90deg,#c77dff,#7209b7);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+h3{
+    margin-top:25px;
+    color:#c77dff;
+}
+
+p{
+    opacity:0.85;
+    line-height:1.8;
+}
+
+.formula{
+    background:rgba(255,255,255,0.07);
+    padding:15px;
+    border-radius:10px;
+    margin:20px 0;
+    border-left:4px solid #c77dff;
+}
+
+ul{
+    margin:20px 0 20px 20px;
+}
+
+button{
+    padding:12px 30px;
+    border-radius:30px;
+    border:1px solid #c77dff;
+    background:transparent;
+    color:#c77dff;
+    cursor:pointer;
+    font-size:14px;
+    letter-spacing:1px;
+    transition:0.3s ease;
+    box-shadow:0 0 15px #7209b7;
+}
+
+button:hover{
+    background:#7209b7;
+    color:white;
+    box-shadow:0 0 25px #c77dff;
+    transform:scale(1.05);
+}
+
+.center{
+    text-align:center;
+    margin-top:25px;
+}
+
+video{
+    width:100%;
+    margin-top:20px;
+    border-radius:15px;
+}
+
+/* School logo on top-right */
+.school-logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 80px;
+    height: auto;
+    z-index: 5;
+}
+</style>
+</head>
+
+<body>
+
+<!-- School Logo -->
+<img src="Laurensia.png" alt="School Logo" class="school-logo">
+
+<!-- Floating Orbs -->
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+
+<nav>
+    <a href="test.html">Home</a>
+    <a href="materials.html">Grades</a>
+    <a href="About us.html">About</a>
+    <a href="sources.html">Sources</a>
+</nav>
+
+<div class="section">
+    <h1>Grade 7 Physics</h1>
+    <p style="text-align:center;">This page will guide you through the basics of motion: speed, distance, time, and acceleration. You will learn how to solve problems using formulas, understand the meaning of the numbers, and apply concepts to everyday situations.</p>
+</div>
+
+<!-- Speed, Distance & Time -->
+<div class="section">
+    <h2>Speed, Distance & Time</h2>
+    <p>Speed, distance, and time are three quantities that describe how an object moves. Understanding their relationship allows you to calculate any one quantity if the other two are known.</p>
+
+    <h3>Distance</h3>
+    <p>Distance is the total path traveled by an object, regardless of direction.</p>
+    <div class="formula">
+        Total Distance = Sum of all paths traveled
+    </div>
+    <p>Example 1: A person walks 5 m forward, then 5 m back. Total distance = 5 + 5 = 10 m.</p>
+    <p>Example 2: A runner completes two laps around a 400 m track. Total distance = 400 × 2 = 800 m.</p>
+
+    <h3>Time</h3>
+    <p>Time is how long it takes to cover a certain distance. Measured in seconds (s), minutes (min), or hours (h).</p>
+    <div class="formula">
+        Time = Distance ÷ Speed
+    </div>
+    <p>Example: A cyclist travels 20 km at 5 km/h. Time = 20 ÷ 5 = 4 hours.</p>
+
+    <h3>Speed</h3>
+    <p>Speed tells how fast an object moves.</p>
+    <div class="formula">
+        Speed = Distance ÷ Time
+    </div>
+    <p>Example 1: Car travels 100 m in 5 s → 100 ÷ 5 = 20 m/s.</p>
+    <p>Example 2: Train covers 150 km in 3 hours → 150 ÷ 3 = 50 km/h.</p>
+
+    <h3>Rearranging Formulas</h3>
+    <div class="formula">
+        Distance = Speed × Time <br>
+        Time = Distance ÷ Speed
+    </div>
+    <p>Example: Runner moves at 4 m/s for 15 s → Distance = 4 × 15 = 60 m.</p>
+</div>
+
+<!-- Acceleration -->
+<div class="section">
+    <h2>Acceleration</h2>
+    <p>Acceleration measures how quickly an object's velocity changes over time. Velocity includes speed and direction, so acceleration occurs when an object speeds up, slows down, or changes direction.</p>
+
+    <ul>
+        <li>Speeding up → positive acceleration</li>
+        <li>Slowing down → negative acceleration (deceleration)</li>
+        <li>Constant speed → zero acceleration</li>
+    </ul>
+
+    <div class="formula">
+        a = (v − u) ÷ t
+    </div>
+    <p>Where: v = final velocity, u = initial velocity, t = time taken</p>
+
+    <h3>Example 1: Car speeding up</h3>
+    <p>Car accelerates from 10 m/s to 30 m/s in 5 s.</p>
+    <p>Step 1: Identify values → u = 10, v = 30, t = 5</p>
+    <p>Step 2: a = (v − u) ÷ t = (30 − 10) ÷ 5</p>
+    <p>Step 3: a = 20 ÷ 5 = 4 m/s² → The car's speed increases by 4 m/s every second.</p>
+
+    <h3>Example 2: Bicycle slowing down</h3>
+    <p>Bicycle slows from 12 m/s to 4 m/s in 2 s.</p>
+    <p>a = (4 − 12) ÷ 2 = -8 ÷ 2 = -4 m/s² → Negative acceleration means deceleration.</p>
+
+    <h3>Example 3: Rocket launch</h3>
+    <p>Rocket goes from 0 to 100 m/s in 10 s → a = (100 − 0) ÷ 10 = 10 m/s².</p>
+    <p>This means the rocket’s speed increases by 10 m/s each second.</p>
+
+    <h3>Example 4: Multiple-step problem</h3>
+    <p>A car accelerates from 5 m/s to 25 m/s in 4 s, then continues for another 2 s at constant speed. Find acceleration in the first phase and total distance covered.</p>
+    <p>Step 1: Acceleration = (25 − 5) ÷ 4 = 20 ÷ 4 = 5 m/s²</p>
+    <p>Step 2: Distance during acceleration = u×t + 0.5×a×t² = 5×4 + 0.5×5×16 = 20 + 40 = 60 m</p>
+    <p>Step 3: Distance at constant speed = speed × time = 25 × 2 = 50 m</p>
+    <p>Total distance = 60 + 50 = 110 m</p>
+</div>
+
+<!-- Video Section -->
+<div class="section">
+    <h2>Video Explanation</h2>
+    <p>Watch the video to see motion concepts in action. Pause and try to calculate distance, speed, and acceleration along with the examples.</p>
+    <video controls>
+        <source src="speed-video.mp4" type="video/mp4">
+    </video>
+</div>
+
+<!-- Simulation Section -->
+<div class="section center">
+    <h2>Interactive Simulations</h2>
+    <p>Try these simulations to explore how speed, distance, and acceleration are related. Observe how changing one variable affects the others.</p>
+    <a href="https://sg.iwant2study.org/ospsg/index.php/404-speed-distance-time-in-motion-race-car" target="_blank">
+        <button>Race Car Simulation</button>
+    </a>
+    <br><br>
+    <a href="https://www.labxchange.org/library/items/lb:LabXchange:aefb97e0:lx_simulation:1?fullscreen=true" target="_blank">
+        <button>Acceleration Simulation</button>
+    </a>
+</div>
+
+<!-- Challenge Section -->
+<div class="section center">
+    <h2>Think You're Ready?</h2>
+    <p>Test your understanding of speed, distance, and acceleration in a live challenge. Apply what you learned in the previous examples and see your results instantly.</p>
+    <a href="https://dashboard.blooket.com/set/69a6f9fbed3db019fa75861a" target="_blank">
+        <button>JOIN THE BLOOKET CHALLENGE</button>
+    </a>
+</div>
+
+</body>
+</html>
